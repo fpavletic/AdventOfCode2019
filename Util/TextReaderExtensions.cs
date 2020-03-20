@@ -37,6 +37,7 @@ namespace AdventOfCode2019
 				return val;
 			}
 			throw new InvalidOperationException("Cant find any more integers");
+
 		}
 
 		public static bool ReadInt(this TextReader textReader, out int num)
@@ -53,6 +54,39 @@ namespace AdventOfCode2019
 				sb.Append((char)textReader.Read());
 			}
 			num = int.Parse(sb.ToString());
+			return true;
+		}
+		public static IEnumerable<long> ReadLongs(this TextReader textReader, int max = -1)
+		{
+			int count = 0;
+			while (count++ != max && ReadLong(textReader, out var num))
+			{
+				yield return num;
+			}
+		}
+		public static long ReadLong(this TextReader textReader)
+		{
+			if ( textReader.ReadLong(out var val))
+			{
+				return val;
+			}
+			throw new InvalidOperationException("Cant find any more longs");
+		}
+
+		public static bool ReadLong(this TextReader textReader, out long num)
+		{
+			if (!FindDigitOrMinus(textReader))
+			{
+				num = 0;
+				return false;
+			}
+
+			var sb = new StringBuilder();
+			while (IsDigitOrMinus((char)textReader.Peek()))
+			{
+				sb.Append((char)textReader.Read());
+			}
+			num = long.Parse(sb.ToString());
 			return true;
 		}
 

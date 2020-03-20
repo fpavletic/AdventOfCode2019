@@ -9,3 +9,5 @@ C:\Development\AdventOfCode2019\obj\Debug\netcoreapp3.0\AdventOfCode2019.Assembl
 C:\Development\AdventOfCode2019\obj\Debug\netcoreapp3.0\AdventOfCode2019.AssemblyInfo.cs
 C:\Development\AdventOfCode2019\obj\Debug\netcoreapp3.0\AdventOfCode2019.dll
 C:\Development\AdventOfCode2019\obj\Debug\netcoreapp3.0\AdventOfCode2019.pdb
+C:\Development\AdventOfCode2019\bin\Debug\netcoreapp3.0\Priority Queue.dll
+C:\Development\AdventOfCode2019\obj\Debug\netcoreapp3.0\AdventOfCode2019.csproj.CopyComplete
